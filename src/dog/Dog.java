@@ -38,13 +38,19 @@ class Animal {
 
 
 class Bitch extends Animal{
+    
     public String name = "Ellie";
- public void talk(){ 
-     System.out.println("Woof");
- }
+    
+    public void talk(){ 
+        System.out.println("Woof");
+    }
 }
 
 class Sire extends Bitch {
     public String name = "Doggo";
+    
+    public void talk(){ 
+        System.out.println("Bork");
+    }
 }
 
