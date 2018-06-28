@@ -22,6 +22,10 @@ public class Dog {
        Sire doggoC= new Sire();
        System.out.println(doggoC.name);
        doggoC.talk();
+       
+       Pupper doggoD= new Pupper();
+       System.out.println(doggoD.name);
+       doggoD.talk();
     }  
 }
 
@@ -54,5 +58,21 @@ class Sire extends Bitch {
     }
 }
 
-//aloha
-//hall0
+class Pupper extends Sire implements Actions{
+    public String name = "Pupper";
+    
+    public void talk(){ 
+        System.out.println("ruff");
+    }
+    public void eat() {
+        System.out.println("ruff ufff");
+    }
+    public void sleep() {
+        System.out.println("rrrrr");
+    }
+} 
+
+interface Actions {
+    public void eat();
+    public void sleep();
+}
