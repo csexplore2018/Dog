@@ -5,26 +5,22 @@
  */
 package dog;
 
-/**
- *
- * @author gc_science13
- */
 public class Dog {
 
     public String name= "Dog";
     public String food="Bone";
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
        Animal doggoA= new Animal();
+       System.out.println(doggoA.name);
        doggoA.talk();
        
-              Bitch doggoB= new Bitch();
+       Bitch doggoB= new Bitch();
+       System.out.println(doggoB.name);
        doggoB.talk();
        
-              Sire doggoC= new Sire();
+       Sire doggoC= new Sire();
+       System.out.println(doggoC.name);
        doggoC.talk();
     }  
 }
@@ -34,16 +30,21 @@ class Animal {
     public String name = "Animal";
     public String food="Food";
 
-    public void talk(){ System.out.println("Hey.");  }
+    public void talk(){ 
+        System.out.println("Hey.");  
+    }
 }
 
 
 
 class Bitch extends Animal{
- public void talk(){ System.out.println("Woof");}
+    public String name = "Ellie";
+ public void talk(){ 
+     System.out.println("Woof");
+ }
 }
 
 class Sire extends Bitch {
-    public String name = " Doggo";
+    public String name = "Doggo";
 }
 
